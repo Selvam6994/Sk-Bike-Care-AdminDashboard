@@ -1,0 +1,74 @@
+import { Button, IconButton, Paper } from '@mui/material'
+import React from 'react'
+import TextField from "@mui/material/TextField";
+import CloseIcon from "@mui/icons-material/Close";
+import { useNavigate } from "react-router-dom";
+import { useFormik } from "formik";
+
+
+function AdminSetNewPin() {
+    const setNewPasscode = useFormik({
+        initialValues: {
+          name: "",
+          phone: "",
+          pin: "",
+          confirmPin: "",
+        },
+        onSubmit: async (values) => {
+          let userData = await fetch(
+            `http://localhost:4000/signUp/${signUpForm.values.email}`,
+            {
+              method: "POST",
+              headers: {
+                "Content-type": "application/json",
+              },
+              body: JSON.stringify(values),
+            }
+          );
+          if (userData.status == 200) {
+            setuserAccountForm(false);
+            setOtpVerifyForm(false);
+            setErrorMessage("");
+          } else if (userData.status == 400) {
+            setErrorMessage("Check the pin number");
+          }
+        },
+      });
+  return (
+    <div className="setNewPinPage">
+    <Paper className="AdminNewPinForm" elevation={8}>
+      <div className="closeButton">
+        <IconButton color="error" onClick={() => navigate("/")}>
+          <CloseIcon />
+        </IconButton>
+      </div>
+      {/* //admin login form */}
+      <form className="AdminNewPinForm">
+        {" "}
+        <span style={{ fontSize: "30px", fontWeight: "bold" }}>
+         Set New Pin
+        </span>
+        <TextField
+          id="standard-basic"
+          label="Email"
+          name="email"
+          type="email"
+          variant="standard"
+        />
+        <TextField
+          id="standard-basic"
+          label="Pin Number"
+          name="pin"
+          type="password"
+          variant="standard"
+        />
+        <Button>Log In</Button>
+        <Button onClick={() => navigate("/adminSignup")}>Sign Up</Button>
+        <Button>Forgot Password?</Button>
+      </form>
+    </Paper>
+  </div>
+  )
+}
+
+export default AdminSetNewPin

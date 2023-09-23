@@ -1,0 +1,346 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins");
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Poppins;
+}
+/* main page properties */
+.mainPage {
+  border: 2px solid;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #000000ae;
+}
+
+.title {
+  font-size: 50px;
+  font-weight: bolder;
+  color: antiquewhite;
+}
+.helperText {
+  font-size: 40px;
+  font-weight: bolder;
+  color: #edcd00;
+}
+/* ------admin login page properties---------- */
+
+/* close Icon button */
+.closeButton {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: 90%;
+}
+.loginPage,
+.signupPage,
+.signupOtpPage,
+.setNewPinPage {
+  width: 100%;
+  height: 100vh;
+  min-width: 280px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.AdminLoginForm,
+.techniLoginForm,
+.AdminSignupOtpForm,
+.AdminNewPinForm,
+.techniSignupOtpForm,
+.techniNewPinForm {
+  width: 400px;
+  height: fit-content;
+  min-width: 280px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 20px;
+}
+
+/* ------admin login page properties---------- */
+
+/* ------admin home page properties----------- */
+.homePage {
+  /* border: 5px solid green; */
+  width: 100%;
+  min-height: 100vh;
+  background-color: #edcd00;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.sideNavBar {
+  /* border: 2px solid red; */
+  width: 15%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.pageDetails {
+  width: 60%;
+  min-height: 20vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.pageDetails span {
+  font-size: 30px;
+  color: aliceblue;
+  text-align: center;
+}
+
+.navButtonSection {
+  /* border: 2px solid green; */
+  width: 100%;
+  min-height: 70vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.sideNavButtons {
+  width: 200px;
+  min-height: fit-content;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  cursor: pointer;
+}
+
+/* Overview page content top bar,status cards and table */
+.contentSection {
+  width: 85%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 2rem;
+}
+
+.adminPageTopBar,
+.techniPageTopBar {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+/* ----------overview,enquiry page top cards */
+.statusCardSection,
+.enquiryStatusSection {
+  /* border: 2px solid; */
+  width: 90%;
+  min-width: 280px;
+  height: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 2rem;
+}
+.statusCards,
+.enquiryStatusCards {
+  width: 200px;
+  min-height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  cursor: pointer;
+}
+/* ----------overview,enquirypage top cards */
+/* ----------overview,enquiry page table section*/
+.overViewTableSection,
+.enquiryTableSection,
+.userDataTableSection,
+.feedbackTableSection,
+.NewServiceRequestSection,
+.costValidationSection,
+.customerApprovalSection,
+.pendingApprovalSection,
+.serviceQueueSection,
+.serviceProcessSection,
+.qcProcessSection,
+.washingProcessSection,.billingProcessSection {
+  width: 100%;
+  min-height: 600px;
+  overflow: scroll;
+}
+.overViewTableSection table,
+.enquiryTableSection table,
+.userDataTableSection table,
+.feedbackTableSection table,
+.NewServiceRequestSection table,
+.costValidationSection table,
+.customerApprovalSection table,
+.pendingApprovalSection table,
+.serviceQueueSection table,
+.serviceProcessSection table,
+.qcProcessSection table,
+.washingProcessSection table,.billingProcessSection table {
+  width: 100%;
+  font-size: 20px;
+}
+.overViewTableSection td,
+.enquiryTableSection td,
+.userDataTableSection td,
+.feedbackTableSection td,
+.NewServiceRequestSection td,
+.costValidationSection td,
+.customerApprovalSection td,
+.pendingApprovalSection td,
+.serviceQueueSection td,
+.serviceProcessSection td,
+.qcProcessSection td,
+.washingProcessSection td,.billingProcessSection td {
+  text-align: center;
+  border: 2px solid rgb(0, 0, 0);
+}
+
+.messageSection {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* -----------admin page table section */
+
+/* Overview page content top bar,status cards and table */
+
+/* list of sevices page properties */
+.listOfServices {
+  border: 2px solid;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.servicesOffered {
+  border: 2px solid;
+  width: 100%;
+  min-height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.serviceCards {
+  width: 200px;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.serviceCards img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+}
+.seviceCardDetails {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.7);
+  width: 200px;
+  height: 200px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 20px;
+  color: white;
+}
+
+.addService {
+  border: 2px solid;
+  width: 100%;
+  min-height: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.addService span {
+  font-size: 25px;
+}
+.addServiceForm {
+  border: 2px solid;
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+/* -----------------technicians page properties--------------- */
+.estimationPageSection,
+.shopFloorPageSection,
+.billingPageSection {
+  width: 90%;
+  min-width: 280px;
+  height: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 2rem;
+}
+
+.estimationStatusCards,
+.shopFloorStatusCards,
+.billingStatusCards {
+  width: 200px;
+  min-height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  cursor: pointer;
+}
+
+/* In cost validation page add cost form properties */
+.addFormSection {
+  position: absolute;
+  width: 50%;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  min-width: 280px;
+  top: 100px;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.addCostForm {
+  width: 60%;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  min-width: 280px;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}

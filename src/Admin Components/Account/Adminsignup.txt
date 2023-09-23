@@ -1,0 +1,59 @@
+import { Button, IconButton, Paper } from "@mui/material";
+import React, { useState } from "react";
+import TextField from "@mui/material/TextField";
+import CloseIcon from "@mui/icons-material/Close";
+import { useNavigate } from "react-router-dom";
+import { useFormik } from "formik";
+
+function Adminsignup() {
+  const navigate = useNavigate();
+  const adminSignUpForm = useFormik({
+    initialValues: {
+      email: "",
+    },
+    onSubmit: async (values) => {
+      let signUpData = await fetch("http://localhost:4000/adminSignUp", {
+        method: "POST",
+        headers: {
+          "Content-type": "application/json",
+        },
+        body: JSON.stringify(values),
+      });
+      if (signUpData.status == 201) {
+        navigate("/adminSignupOtp");
+        setErrorMessage("");
+        document.getElementById("otp").value = "";
+        console.log("email sent");
+      } else if (signUpData.status == 401) {
+        setErrorMessage("Invalid credentials try any other email");
+      }
+    },
+  });
+  return (
+    <div className="signupPage">
+      <Paper className="AdminLoginForm" elevation={8}>
+        <div className="closeButton">
+          <IconButton color="error" onClick={() => navigate("/")}>
+            <CloseIcon />
+          </IconButton>
+        </div>
+        <form
+          className="AdminLoginForm"
+          onSubmit={adminSignUpForm.handleSubmit}
+        >
+          <TextField
+            id="standard-basic"
+            label="Email"
+            name="email"
+            type="email"
+            variant="standard"
+            onChange={adminSignUpForm.handleChange}
+          />
+          <Button type="submit">Send OTP</Button>
+        </form>
+      </Paper>
+    </div>
+  );
+}
+
+export default Adminsignup;

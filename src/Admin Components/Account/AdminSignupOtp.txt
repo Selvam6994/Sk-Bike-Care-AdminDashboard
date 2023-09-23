@@ -1,0 +1,63 @@
+import { Button, IconButton, Paper } from "@mui/material";
+import React, { useState } from "react";
+import TextField from "@mui/material/TextField";
+import CloseIcon from "@mui/icons-material/Close";
+import { useNavigate } from "react-router-dom";
+import { useFormik } from "formik";
+
+function AdminSignupOtp() {
+  const navigate = useNavigate();
+  const[errorMessage,setErrorMessage]=useState("")
+  const adminSignUpOtpForm = useFormik({
+    initialValues:{
+        otp:""
+    },
+    onSubmit:async (values) => {
+        let otpData = await fetch(
+          "http://localhost:4000/adminSignUp/otpVerification",
+          {
+            method: "POST",
+            headers: {
+              "Content-type": "application/json",
+            },
+            body: JSON.stringify(values),
+          }
+        );
+        if (otpData.status == 200) {
+        navigate("/adminSetNewPin")
+        } else if (otpData.status == 400) {
+          setErrorMessage("OTP does not match");
+        }
+        console.log(typeof(values))
+      },
+  })
+
+  return (
+    <div className="signupOtpPage">
+      <Paper className="AdminLoginForm" elevation={8}>
+        <div className="closeButton">
+          <IconButton color="error" onClick={() => navigate("/")}>
+            <CloseIcon />
+          </IconButton>
+        </div>
+        <form
+          className="AdminSignupOtpForm"
+          onSubmit={adminSignUpOtpForm.handleSubmit}
+        >
+          <TextField
+            id="standard-basic"
+            label="OTP"
+            name="otp"
+            type="password"
+            variant="standard"
+            onChange={adminSignUpOtpForm.handleChange}
+          />
+          <span>{errorMessage}</span>
+          <Button type="submit">Verify OTP</Button>
+        </form>
+      </Paper>
+    </div>
+  );
+}
+
+export default AdminSignupOtp;
