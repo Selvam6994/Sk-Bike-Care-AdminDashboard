@@ -41,7 +41,7 @@ function Adminhomepage() {
       linKTo: "addService",
     },
     {
-      name: "Custumers Info",
+      name: "Customers Info",
       isMenuButton: false,
       linKTo: "customerList",
     },
