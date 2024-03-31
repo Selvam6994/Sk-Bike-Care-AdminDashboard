@@ -9,7 +9,7 @@ function Newenquiry({ newEnquiries, getNewEnquiriesData, getContactedData }) {
   }
 
   async function getDetails(data) {
-    const updateStatus = await fetch("http://localhost:4000/enquiryContacted",    {
+    const updateStatus = await fetch("https://sk-bike-app-backend.onrender.com/enquiryContacted",    {
       method: "PUT",
       headers: { "Content-type": "application/json" , "x-auth-token": sessionStorage.getItem("authrisationToken")},
       body: JSON.stringify(data),

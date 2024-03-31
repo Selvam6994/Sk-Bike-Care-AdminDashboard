@@ -4,7 +4,7 @@ function Generalenquires() {
   const [enquiryData, setEnquiryData] = useState([]);
   async function getEnquiryData() {
     const getServiceData = await fetch(
-      `http://localhost:4000/totalEnquries`,
+      `https://sk-bike-app-backend.onrender.com/totalEnquries`,
       {
         headers: {
           "x-auth-token": sessionStorage.getItem("authrisationToken"),

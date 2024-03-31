@@ -22,7 +22,7 @@ function Adminlogin() {
     },
 
     onSubmit: async (values) => {
-      let logInData = await fetch("http://localhost:4000/adminLogIn", {
+      let logInData = await fetch("https://sk-bike-app-backend.onrender.com/adminLogIn", {
         method: "POST",
         headers: {
           "Content-type": "application/json",
@@ -45,7 +45,7 @@ function Adminlogin() {
       email: "",
     },
     onSubmit: async (values) => {
-      let signUpData = await fetch("http://localhost:4000/adminSignUp", {
+      let signUpData = await fetch("https://sk-bike-app-backend.onrender.com/adminSignUp", {
         method: "POST",
         headers: {
           "Content-type": "application/json",
@@ -70,7 +70,7 @@ function Adminlogin() {
     },
     onSubmit: async (values) => {
       let otpData = await fetch(
-        "http://localhost:4000/adminSignUp/otpVerification",
+        "https://sk-bike-app-backend.onrender.com/adminSignUp/otpVerification",
         {
           method: "POST",
           headers: {
@@ -100,7 +100,7 @@ function Adminlogin() {
     },
     onSubmit: async (values) => {
       let userData = await fetch(
-        `http://localhost:4000/adminSignUp/${signUpForm.values.email}`,
+        `https://sk-bike-app-backend.onrender.com/adminSignUp/${signUpForm.values.email}`,
         {
           method: "POST",
           headers: {

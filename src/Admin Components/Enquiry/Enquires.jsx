@@ -12,7 +12,7 @@ function Enquires({
 }) {
   const [newEnquires, setNewEnquires] = useState([]);
   async function getNewEnquires() {
-    const getServiceData = await fetch(`http://localhost:4000/newEnquiry`, {});
+    const getServiceData = await fetch(`https://sk-bike-app-backend.onrender.com/newEnquiry`, {});
     const jsonData = await getServiceData.json();
     setNewEnquires(jsonData.length);
   }
@@ -20,7 +20,7 @@ function Enquires({
   const [contactedEnquires, setContactedEnquires] = useState([]);
   async function getcontactedEnquires() {
     const getServiceData = await fetch(
-      `http://localhost:4000/contactedEnquiry`,
+      `https://sk-bike-app-backend.onrender.com/contactedEnquiry`,
       {}
     );
     const jsonData = await getServiceData.json();
@@ -31,7 +31,7 @@ function Enquires({
   const [convertedEnquires, setConvertedEnquires] = useState([]);
   async function getConvertedEnquires() {
     const getServiceData = await fetch(
-      `http://localhost:4000/convertedEnquiry`,
+      `https://sk-bike-app-backend.onrender.com/convertedEnquiry`,
       {}
     );
     const jsonData = await getServiceData.json();
@@ -42,7 +42,7 @@ function Enquires({
   const [cancelledEnquries, setCancelledEnquries] = useState([]);
   async function getCancelledEnquries() {
     const getServiceData = await fetch(
-      `http://localhost:4000/cancelledEnquiry`,
+      `https://sk-bike-app-backend.onrender.com/cancelledEnquiry`,
       {}
     );
     const jsonData = await getServiceData.json();

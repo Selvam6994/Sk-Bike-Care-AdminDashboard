@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 function Feedback() {
   const [feedBackData, setFeedBackData] = useState([]);
   async function getSignedupclientsData() {
-    const getfeedBackData = await fetch("http://localhost:4000/getFeedback",  {
+    const getfeedBackData = await fetch("https://sk-bike-app-backend.onrender.com/getFeedback",  {
       headers: {
         "x-auth-token": sessionStorage.getItem("authrisationToken"),
       },

@@ -10,7 +10,7 @@ function Contacted({
   getCancelledEnquiries,
 }) {
   async function getDetails(data) {
-    const updateStatus = await fetch("http://localhost:4000/enquiryConverted", {
+    const updateStatus = await fetch("https://sk-bike-app-backend.onrender.com/enquiryConverted", {
       method: "PUT",
       headers: { "Content-type": "application/json","x-auth-token": sessionStorage.getItem("authrisationToken")},
       body: JSON.stringify(data),
@@ -20,7 +20,7 @@ function Contacted({
   }
 
   async function cancelEnquiry(data) {
-    const updateStatus = await fetch("http://localhost:4000/enquiryCancelled", {
+    const updateStatus = await fetch("https://sk-bike-app-backend.onrender.com/enquiryCancelled", {
       method: "PUT",
       headers: { "Content-type": "application/json","x-auth-token": sessionStorage.getItem("authrisationToken") },
       body: JSON.stringify(data),

@@ -4,7 +4,7 @@ function Servicerequest() {
   const [serviceData, setServiceData] = useState([]);
   async function getBookingStatus() {
     const getServiceData = await fetch(
-      `http://localhost:4000/serviceRequests`,
+      `https://sk-bike-app-backend.onrender.com/serviceRequests`,
       {
         headers: {
           "x-auth-token": sessionStorage.getItem("authrisationToken"),

@@ -14,7 +14,7 @@ function Cancelled({
 
   async function deleteCancelledEnquiry(data) {
     const deleteEnquiryData = await fetch(
-      "http://localhost:4000/deleteCancelledEnquiry", 
+      "https://sk-bike-app-backend.onrender.com/deleteCancelledEnquiry", 
       {
         method: "DELETE",
         headers: { "Content-type": "application/json","x-auth-token": sessionStorage.getItem("authrisationToken") },

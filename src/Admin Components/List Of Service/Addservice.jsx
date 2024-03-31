@@ -16,7 +16,7 @@ function Addservice() {
       isForm: "",
     },
     onSubmit: async (values, { resetForm }) => {
-      const postData = await fetch("http://localhost:4000/postServiceList", {
+      const postData = await fetch("https://sk-bike-app-backend.onrender.com/postServiceList", {
         method: "POST",
         headers: {
           "Content-type": "application/json",
@@ -32,7 +32,7 @@ function Addservice() {
 
   //   get service list data function
   async function showServiceData() {
-    const serviceList = await fetch("http://localhost:4000/getServiceList");
+    const serviceList = await fetch("https://sk-bike-app-backend.onrender.com/getServiceList");
     const jsonData = await serviceList.json();
     if (jsonData.message == "No data available") {
       setServiceOptions([]);
@@ -46,7 +46,7 @@ function Addservice() {
 
   //   delete service list data function
   async function deleteServiceData(data) {
-    const deleteData = await fetch("http://localhost:4000/deleteServiceList", {
+    const deleteData = await fetch("https://sk-bike-app-backend.onrender.com/deleteServiceList", {
       method: "DELETE",
       headers: {
         "Content-type": "application/json",

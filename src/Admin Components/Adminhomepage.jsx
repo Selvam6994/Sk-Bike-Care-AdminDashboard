@@ -12,7 +12,7 @@ function Adminhomepage() {
   const [adminData, setAdminData] = useState();
   async function getAdminData() {
     const getAdminData = await fetch(
-      `http://localhost:4000/userAdminData/${decoded.email}`,
+      `https://sk-bike-app-backend.onrender.com/userAdminData/${decoded.email}`,
       {
         headers: {
           "x-auth-token": sessionStorage.getItem("authrisationToken"),

@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 function Signedupclients() {
   const [userData, setUserData] = useState([]);
   async function getSignedupclientsData() {
-    const getUserData = await fetch("http://localhost:4000/getUserData",  {
+    const getUserData = await fetch("https://sk-bike-app-backend.onrender.com/getUserData",  {
       headers: {
         "x-auth-token": sessionStorage.getItem("authrisationToken"),
       },
