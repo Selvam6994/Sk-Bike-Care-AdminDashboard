@@ -23,7 +23,7 @@ function Technilogin() {
     },
 
     onSubmit: async (values) => {
-      let logInData = await fetch("http://localhost:4000/techniLogIn", {
+      let logInData = await fetch("https://sk-bike-app-backend.onrender.com/techniLogIn", {
         method: "POST",
         headers: {
           "Content-type": "application/json",
@@ -46,7 +46,7 @@ function Technilogin() {
       email: "",
     },
     onSubmit: async (values) => {
-      let signUpData = await fetch("http://localhost:4000/techniSignUp", {
+      let signUpData = await fetch("https://sk-bike-app-backend.onrender.com/techniSignUp", {
         method: "POST",
         headers: {
           "Content-type": "application/json",
@@ -70,7 +70,7 @@ function Technilogin() {
     },
     onSubmit: async (values) => {
       let otpData = await fetch(
-        "http://localhost:4000/techniSignUp/otpVerification",
+        "https://sk-bike-app-backend.onrender.com/techniSignUp/otpVerification",
         {
           method: "POST",
           headers: {
@@ -100,7 +100,7 @@ function Technilogin() {
     },
     onSubmit: async (values) => {
       let userData = await fetch(
-        `http://localhost:4000/techniSignUp/${signUpForm.values.email}`,
+        `https://sk-bike-app-backend.onrender.com/techniSignUp/${signUpForm.values.email}`,
         {
           method: "POST",
           headers: {

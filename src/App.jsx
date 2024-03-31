@@ -102,7 +102,7 @@ function App() {
   const [cancelledEnquiries, setCancelledEnquiries] = useState([]);
   async function getCancelledEnquiries() {
     const getServiceData = await fetch(
-      `http://localhost:4000/cancelledEnquiry`,
+      `https://sk-bike-app-backend.onrender.com/cancelledEnquiry`,
       {
         headers: {
           "x-auth-token": sessionStorage.getItem("authrisationToken"),
@@ -128,7 +128,7 @@ function App() {
   const [serviceData, setServiceData] = useState([]);
   async function getBookingStatus() {
     const getServiceData = await fetch(
-      `http://localhost:4000/serviceRequests`,
+      `https://sk-bike-app-backend.onrender.com/serviceRequests`,
       {
         headers: {
           "x-auth-token": sessionStorage.getItem("authrisationToken"),
@@ -147,7 +147,7 @@ function App() {
   const [costValidationList, setCostValidationList] = useState([]);
   async function getCostValidationList() {
     const getServiceData = await fetch(
-      `http://localhost:4000/costEstimationList`
+      `https://sk-bike-app-backend.onrender.com/costEstimationList`
       //  {
       //    headers: {
       //      "x-auth-token": sessionStorage.getItem("authrisationToken"),
@@ -166,7 +166,7 @@ function App() {
   const [customervalidationData, setCustomerValidationData] = useState([]);
   async function getCustomerValidationList() {
     const getServiceData = await fetch(
-      `http://localhost:4000/customerApproval`
+      `https://sk-bike-app-backend.onrender.com/customerApproval`
       //  {
       //    headers: {
       //      "x-auth-token": sessionStorage.getItem("authrisationToken"),
@@ -185,7 +185,7 @@ function App() {
   const [pendingApprovalData, setPendingApprovalData] = useState([]);
   async function getPendingApprovalList() {
     const getServiceData = await fetch(
-      `http://localhost:4000/getPendingList`
+      `https://sk-bike-app-backend.onrender.com/getPendingList`
       //  {
       //    headers: {
       //      "x-auth-token": sessionStorage.getItem("authrisationToken"),
@@ -204,7 +204,7 @@ function App() {
   const [serviceQueueData, setServiceQueueData] = useState([]);
   async function getServiceQueueData() {
     const getServiceData = await fetch(
-      `http://localhost:4000/getServiceQueue`
+      `https://sk-bike-app-backend.onrender.com/getServiceQueue`
       //  {
       //    headers: {
       //      "x-auth-token": sessionStorage.getItem("authrisationToken"),
@@ -223,7 +223,7 @@ function App() {
   const [serviceProcessData, setServiceProcessData] = useState([]);
   async function getServiceProcessData() {
     const getServiceData = await fetch(
-      `http://localhost:4000/getServiceProcess`
+      `https://sk-bike-app-backend.onrender.com/getServiceProcess`
       //  {
       //    headers: {
       //      "x-auth-token": sessionStorage.getItem("authrisationToken"),
@@ -242,7 +242,7 @@ function App() {
   const [qcProcessData, setQcProcessData] = useState([]);
   async function getQcProcessData() {
     const getServiceData = await fetch(
-      `http://localhost:4000/getQcProcess`
+      `https://sk-bike-app-backend.onrender.com/getQcProcess`
       //  {
       //    headers: {
       //      "x-auth-token": sessionStorage.getItem("authrisationToken"),
@@ -261,7 +261,7 @@ function App() {
   const [washingProcessData, setWashingProcessData] = useState([]);
   async function getWashingProcessData() {
     const getServiceData = await fetch(
-      `http://localhost:4000/getWashingProcess`
+      `https://sk-bike-app-backend.onrender.com/getWashingProcess`
       //  {
       //    headers: {
       //      "x-auth-token": sessionStorage.getItem("authrisationToken"),
@@ -280,7 +280,7 @@ function App() {
   const [billingProcessData, setBillingProcessData] = useState([]);
   async function getBillingProcessData() {
     const getData = await fetch(
-      `http://localhost:4000/getBillingData`
+      `https://sk-bike-app-backend.onrender.com/getBillingData`
       //  {
       //    headers: {
       //      "x-auth-token": sessionStorage.getItem("authrisationToken"),
@@ -299,7 +299,7 @@ function App() {
   const [deliveredData, setDeliveredData] = useState([]);
   async function getDeliveredData() {
     const getServiceData = await fetch(
-      `http://localhost:4000/getDeliveredData`
+      `https://sk-bike-app-backend.onrender.com/getDeliveredData`
       //  {
       //    headers: {
       //      "x-auth-token": sessionStorage.getItem("authrisationToken"),

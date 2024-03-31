@@ -3,7 +3,7 @@ import React from "react";
 
 function Waterwash({ washingProcessData, getWashingProcessData }) {
   async function moveToBilling(data) {
-    const updateStatus = await fetch("http://localhost:4000/billing", {
+    const updateStatus = await fetch("https://sk-bike-app-backend.onrender.com/billing", {
       method: "POST",
       headers: { "Content-type": "application/json" },
       body: JSON.stringify(data),

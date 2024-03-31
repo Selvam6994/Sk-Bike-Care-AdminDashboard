@@ -32,7 +32,7 @@ function Costvalidation({
     },
 
     onSubmit: async (values) => {
-      const addCost = await fetch("http://localhost:4000/addCost", {
+      const addCost = await fetch("https://sk-bike-app-backend.onrender.com/addCost", {
         method: "PUT",
         headers: { "Content-type": "application/json" },
         body: JSON.stringify(values),

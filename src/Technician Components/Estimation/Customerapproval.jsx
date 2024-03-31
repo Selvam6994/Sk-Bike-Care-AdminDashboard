@@ -8,7 +8,7 @@ function Customerapproval({
   getServiceQueueData
 }) {
   async function approvedRequest(data) {
-    const updateStatus = await fetch("http://localhost:4000/approvedRequest", {
+    const updateStatus = await fetch("https://sk-bike-app-backend.onrender.com/approvedRequest", {
       method: "POST",
       headers: { "Content-type": "application/json" },
       body: JSON.stringify(data),
@@ -18,7 +18,7 @@ function Customerapproval({
   }
 
   async function approvalPending(data) {
-    const updateStatus = await fetch("http://localhost:4000/pendingStatus", {
+    const updateStatus = await fetch("https://sk-bike-app-backend.onrender.com/pendingStatus", {
       method: "PUT",
       headers: { "Content-type": "application/json" },
       body: JSON.stringify(data),

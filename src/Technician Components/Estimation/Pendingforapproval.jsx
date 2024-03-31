@@ -5,7 +5,7 @@ function Pendingforapproval({ pendingApprovalData,getPendingApprovalList}) {
 
     
   async function deletePendingData(data) {
-    const updateStatus = await fetch("http://localhost:4000/deletePendingData", {
+    const updateStatus = await fetch("https://sk-bike-app-backend.onrender.com/deletePendingData", {
       method: "DELETE",
       headers: { "Content-type": "application/json" },
       body: JSON.stringify(data),

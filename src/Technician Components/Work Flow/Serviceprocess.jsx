@@ -7,7 +7,7 @@ function Serviceprocess({
   getQcProcessData,
 }) {
   async function moveToQc(data) {
-    const updateStatus = await fetch("http://localhost:4000/moveToQc", {
+    const updateStatus = await fetch("https://sk-bike-app-backend.onrender.com/moveToQc", {
       method: "PUT",
       headers: { "Content-type": "application/json" },
       body: JSON.stringify(data),

@@ -3,7 +3,7 @@ import React from "react";
 
 function Newservicerequest({ serviceData, getBookingStatus,getCostValidationList}) {
   async function getDetails(data) {
-    const updateStatus = await fetch("http://localhost:4000/costEstimation", {
+    const updateStatus = await fetch("https://sk-bike-app-backend.onrender.com/costEstimation", {
       method: "PUT",
       headers: { "Content-type": "application/json" },
       body: JSON.stringify(data),

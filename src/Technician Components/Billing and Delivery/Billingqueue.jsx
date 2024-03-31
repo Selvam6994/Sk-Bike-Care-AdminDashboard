@@ -7,7 +7,7 @@ function Billingqueue({
   getDeliveredData,
 }) {
   async function moveToDelivery(data) {
-    const updateStatus = await fetch("http://localhost:4000/delivery", {
+    const updateStatus = await fetch("https://sk-bike-app-backend.onrender.com/delivery", {
       method: "POST",
       headers: { "Content-type": "application/json" },
       body: JSON.stringify(data),

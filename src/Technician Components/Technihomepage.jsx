@@ -14,7 +14,7 @@ function Technihomepage() {
 
   async function getTechniData() {
     const getServiceData = await fetch(
-      `http://localhost:4000/userTechniData/${decoded.email}`
+      `https://sk-bike-app-backend.onrender.com/userTechniData/${decoded.email}`
     );
     const jsonData = await getServiceData.json();
     setTechniData(jsonData.name);

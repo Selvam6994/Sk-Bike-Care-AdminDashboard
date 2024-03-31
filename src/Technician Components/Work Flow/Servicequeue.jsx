@@ -7,7 +7,7 @@ function Servicequeue({
   getServiceProcessData,
 }) {
   async function moveToService(data) {
-    const updateStatus = await fetch("http://localhost:4000/moveToService", {
+    const updateStatus = await fetch("https://sk-bike-app-backend.onrender.com/moveToService", {
       method: "PUT",
       headers: { "Content-type": "application/json" },
       body: JSON.stringify(data),
